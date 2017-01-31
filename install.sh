@@ -112,6 +112,7 @@ brew cask install google-chrome
 brew cask install 1password
 brew cask install appcleaner
 brew cask install caffeine
+brew cask install bartender
 
 bot "To set the Material Theme for Sublime Text, check here:"
 open https://github.com/equinusocio/material-theme
