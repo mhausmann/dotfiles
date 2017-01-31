@@ -109,19 +109,11 @@ brew install tree
 running "Installing a few Cask apps."
 brew cask install google-chrome
 brew cask install sublime-text
-running "Applying sublime config..."
-  st=$(pwd)/sublime/packages
-  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
-  asprefs="$as/User/Preferences.sublime-settings"
-  if [[ -d "$as" ]]; then
-    for theme in $st/Theme*; do
-      cp -r $theme $as
-    done
-    rm $asprefs
-    cp -r $st/pm-themes $as
-  fi
 brew cask install 1password
 brew cask install appcleaner
+
+bot "To set the Material Theme for Sublime Text, check here:"
+open https://github.com/equinusocio/material-theme
 
 running "Installing Mac App Store apps."
 brew install mas
