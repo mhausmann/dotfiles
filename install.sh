@@ -107,18 +107,28 @@ brew install ssh-copy-id
 brew install tree
 
 running "Installing a few Cask apps."
-brew cask install google-chrome
 brew cask install sublime-text
+brew cask install google-chrome
 brew cask install 1password
 brew cask install appcleaner
+brew cask install caffeine
 
 bot "To set the Material Theme for Sublime Text, check here:"
 open https://github.com/equinusocio/material-theme
 
-running "Installing Mac App Store apps."
+bot "Installing Mac App Store apps."
 brew install mas
 mas signin matt@u6.co.za
-popclip=$(mas search popclip | awk '{print $1;}') &&  mas install $popclip
+running "Installing PopClip"
+mas install 445189367
+running "Installing Evernote"
+mas install 406056744
+running "Install Slack"
+mas install 803453959
+running "Installing iStatistica"
+mas install 1025822138
+running "Installing WhatsApp Desktop"
+mas install 1147396723
 
 bot "installing fonts"
 ./fonts/install.sh
