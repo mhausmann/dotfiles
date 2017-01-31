@@ -111,12 +111,37 @@ brew install tree
 running "Installing a few Cask apps."
 brew cask install google-ehrome
 brew cask install sublime-text
+running "Applying sublime config..."
+  st=$(pwd)/sublime/packages
+  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
+  asprefs="$as/User/Preferences.sublime-settings"
+  if [[ -d "$as" ]]; then
+    for theme in $st/Theme*; do
+      cp -r $theme $as
+    done
+    rm $asprefs
+    cp -r $st/pm-themes $as
 brew cask install 1password
+brew cask install appcleaner
 
 running "Installing Mac App Store apps."
 brew install mas
 mas signin matt@u6.co.za
 popclip=$(mas search popclip | awk '{print $1;}') &&  mas install $popclip
+
+bot "installing fonts"
+./fonts/install.sh
+brew tap caskroom/fonts
+require_cask font-fontawesome
+require_cask font-awesome-terminal-fonts
+require_cask font-hack
+require_cask font-inconsolata-dz-for-powerline
+require_cask font-inconsolata-g-for-powerline
+require_cask font-inconsolata-for-powerline
+require_cask font-roboto-mono
+require_cask font-roboto-mono-for-powerline
+require_cask font-source-code-pro
+ok
 
 running "Remove outdated versions from the Brew cellar."
 brew cleanup
