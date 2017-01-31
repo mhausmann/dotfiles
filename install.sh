@@ -16,6 +16,8 @@ if sudo grep -q "# %wheel\tALL=(ALL) NOPASSWD: ALL" "/etc/sudoers"; then
   # Keep-alive: update existing sudo time stamp until the script has finished
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+fi
+
 running "Installing XCode command-line tools."
 xcode-select --install
 sleep 1
@@ -76,11 +78,9 @@ running "Installing GNU core utilities (those that come with macOS are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 
-running "Installing some other useful utilities like `sponge`."
+running "Installing GNU utils."
 brew install moreutils
-runnign "Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed."
 brew install findutils
-running "Install GNU `sed`, overwriting the built-in `sed`."
 brew install gnu-sed --with-default-names
 running "Install Bash 4."
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -95,7 +95,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-running "Installing `wget` with IRI support."
+running "Installing wget with IRI support."
 brew install wget --with-iri
 
 running "Installing more recent versions of some macOS tools."
@@ -116,5 +116,5 @@ brew cask install 1password
 running "Remove outdated versions from the Brew cellar."
 brew cleanup
 
-running "About to set system preferences from .macos file."
+running "Setting system preferences from .macos file."
 source .macos
