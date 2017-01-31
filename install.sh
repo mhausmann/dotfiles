@@ -113,6 +113,11 @@ brew cask install google-ehrome
 brew cask install sublime-text
 brew cask install 1password
 
+running "Installing Mac App Store apps."
+brew install mas
+mas signin matt@u6.co.za
+popclip=$(mas search popclip | awk '{print $1;}') &&  mas install $popclip
+
 running "Remove outdated versions from the Brew cellar."
 brew cleanup
 
