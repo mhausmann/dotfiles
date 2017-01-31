@@ -107,7 +107,7 @@ brew install ssh-copy-id
 brew install tree
 
 running "Installing a few Cask apps."
-brew cask install google-ehrome
+brew cask install google-chrome
 brew cask install sublime-text
 running "Applying sublime config..."
   st=$(pwd)/sublime/packages
@@ -119,6 +119,7 @@ running "Applying sublime config..."
     done
     rm $asprefs
     cp -r $st/pm-themes $as
+  fi
 brew cask install 1password
 brew cask install appcleaner
 
