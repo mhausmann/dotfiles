@@ -111,6 +111,7 @@ brew cask install sublime-text
 brew cask install google-chrome
 brew cask install 1password
 brew cask install appcleaner
+brew cask install spotify
 brew cask install caffeine
 brew cask install bartender
 
