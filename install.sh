@@ -115,9 +115,11 @@ brew cask install spotify
 brew cask install caffeine
 brew cask install bartender
 
-running "Installing Pivotal taps and CloudFoundry CLI."
+running "Installing Pivotal taps and PCF CLI deps."
 brew tap cloudfoundry/tap
 brew install cf-cli
+brew install maven
+brew install gpg
 
 bot "To set the Material Theme for Sublime Text, check here:"
 open https://github.com/equinusocio/material-theme
