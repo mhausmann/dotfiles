@@ -150,6 +150,7 @@ require_cask font-inconsolata-for-powerline
 require_cask font-roboto-mono
 require_cask font-roboto-mono-for-powerline
 require_cask font-source-code-pro
+require_cask font-fira-code
 ok
 
 running "Remove outdated versions from the Brew cellar."
