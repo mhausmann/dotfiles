@@ -109,10 +109,9 @@ brew install tree
 running "Installing a few Cask apps."
 brew cask install sublime-text
 brew cask install google-chrome
-brew cask install 1password
+brew cask install spectacle
 brew cask install appcleaner
 brew cask install spotify
-brew cask install caffeine
 brew cask install bartender
 
 running "Installing Pivotal taps and PCF CLI deps."
@@ -129,6 +128,8 @@ brew install mas
 mas signin matt@u6.co.za
 running "Installing PopClip"
 mas install 445189367
+running "Installing 1Password"
+mas install 443987910
 running "Installing Evernote"
 mas install 406056744
 running "Install Slack"
@@ -137,6 +138,8 @@ running "Installing iStatistica"
 mas install 1025822138
 running "Installing WhatsApp Desktop"
 mas install 1147396723
+running "Installing Amphetamine"
+mas install 937984704
 
 bot "installing fonts"
 ./fonts/install.sh
