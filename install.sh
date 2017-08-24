@@ -109,7 +109,7 @@ brew install tree
 running "Installing a few Cask apps."
 brew cask install sublime-text
 brew cask install google-chrome
-brew cask install spectacle
+brew cask install spectacle && mv-f ~/init/spectacle-Shortcuts.json ~/Library/Application Support/Spectacle/Shortcuts.json
 brew cask install appcleaner
 brew cask install spotify
 brew cask install bartender
